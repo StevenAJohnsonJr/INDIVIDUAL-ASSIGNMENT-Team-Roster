@@ -1,0 +1,26 @@
+{
+    "-MiBsBKGWFEU-yluJkL-": {
+      "team_id": "",
+      "firebaseKey": "-MiBsBKGWFEU-yluJkL-",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91+NBrXG-PL.jpg",
+      "role": "Tank",
+      "name": "Tony",
+      "uid": ""
+    },
+    "-MiBsknNSQ6aBG1-2lQS": {
+      "team_id": "",
+      "firebaseKey": "-MiBsknNSQ6aBG1-2lQS",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/A1agLFsWkOL.jpg",
+      "role": "Healer",
+      "name": "Helga",
+      "uid": ""
+    },
+    "-MiBuCve4-r_H-RLUOh2": {
+      "team_id": "",
+      "firebaseKey": "-MiBuCve4-r_H-RLUOh2",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51529Lfc2ML.jpg",
+      "role": "Wizard",
+      "name": "Waylan",
+      "uid": ""
+      }
+}
