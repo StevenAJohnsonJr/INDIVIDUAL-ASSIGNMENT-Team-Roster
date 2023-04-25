@@ -21,12 +21,11 @@ export default function Members() {
   }, []);
 
   return (
-          
-      <div className="d-flex flex-wrap">
-        {/* TODO: map over authors here using AuthorCard component */}
-        {members.map((member) => (
-          <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={getAllTheMembers} />
-        ))}
-      </div>
+    <div className="d-flex flex-wrap">
+      {/* TODO: map over authors here using AuthorCard component */}
+      {members.map((member) => (
+        <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={getAllTheMembers} />
+      ))}
+    </div>
   );
 }
