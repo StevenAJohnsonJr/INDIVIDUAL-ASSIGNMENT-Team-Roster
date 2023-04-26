@@ -1,4 +1,4 @@
-import { getTeamMember, getSingleTeam, deleteSingleTeam } from './teams';
+import { getTeamMember, deleteSingleTeam, getSingleTeam } from './teams';
 import { getSingleMember, deleteMembers } from './members';
 
 const viewMemberDetails = (memberFirebaseKey) => new Promise((resolve, reject) => {
