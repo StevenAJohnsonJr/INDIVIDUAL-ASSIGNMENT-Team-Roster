@@ -1,10 +1,10 @@
-import { getTeamMember, deleteSingleTeam, getSingleTeam } from './teams';
+import { getTeamMember, deleteSingleTeam, getSingleTeams } from './teams';
 import { getSingleMember, deleteMembers } from './members';
 
 const viewMemberDetails = (memberFirebaseKey) => new Promise((resolve, reject) => {
   getSingleMember(memberFirebaseKey)
     .then((memberObject) => {
-      getSingleTeam(memberObject.team_id)
+      getSingleTeams(memberObject.team_id)
         .then((teamObject) => {
           resolve({ teamObject, ...memberObject });
         });
@@ -12,7 +12,7 @@ const viewMemberDetails = (memberFirebaseKey) => new Promise((resolve, reject) =
 });
 
 const viewTeamDetails = (teamFirebaseKey) => new Promise((resolve, reject) => {
-  Promise.all([getSingleTeam(teamFirebaseKey), getTeamMember(teamFirebaseKey)])
+  Promise.all([getSingleTeams(teamFirebaseKey), getTeamMember(teamFirebaseKey)])
     .then(([teamObject, teamMemberArray]) => {
       resolve({ ...teamObject, members: teamMemberArray });
     }).catch((error) => reject(error));

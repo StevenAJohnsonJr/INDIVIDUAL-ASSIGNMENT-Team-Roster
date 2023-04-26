@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
-import { getTeams } from '../API calls/teams';
 import TeamCard from '../components/TeamCard';
+import { getTeams } from '../api/teams';
 
 function Home() {
   // TODO: Set a state for teams

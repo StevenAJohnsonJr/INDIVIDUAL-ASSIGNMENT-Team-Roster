@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { viewMemberDetails } from '../../API calls/mergeData';
-
+import { viewMemberDetails } from '../../api/mergeData';
 
 export default function ViewMember() {
   const [memberDetails, setMemberDetails] = useState({});

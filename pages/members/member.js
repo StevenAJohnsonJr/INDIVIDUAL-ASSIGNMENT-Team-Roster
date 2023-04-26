@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MemberCard from '../../components/MembersCard';
-import { getMembers } from '../../API calls/members';
 import { useAuth } from '../../utils/context/authContext';
+import { getMembers } from '../../api/members';
 
 export default function Members() {
   // TODO: Set a state for books

@@ -1,9 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { viewTeamDetails } from '../../API calls/mergeData';
-
-
-
+import { viewTeamDetails } from '../../api/mergeData';
+import MemberCard from '../../components/MembersCard';
 
 // inside component use
 export default function ViewAuthor() {
