@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { viewAuthorDetails } from '../../api/mergedData';
 import MemberCard from '../../../components/MembersCard';
+import { viewMemberDetails } from '../../../API calls/mergeData';
 
 // inside component use
 export default function ViewMembers() {
@@ -19,10 +19,10 @@ export default function ViewMembers() {
         <h5>
           By {teamMembers.team_name}
         </h5>
-        </div>
+      </div>
       <div className="d-flex flex-wrap">
         {teamMembers.members?.map((member) => (
-          <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={viewAuthorDetails} />
+          <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={viewMemberDetails} />
         ))}
       </div>
     </div>

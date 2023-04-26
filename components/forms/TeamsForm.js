@@ -7,7 +7,6 @@ import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { createTeams, updateTeam } from '../../API calls/teams';
 
-
 const initialState = {
   team_name: '',
 };
