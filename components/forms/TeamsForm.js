@@ -5,13 +5,13 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { createTeams, updateTeam } from '../../API calls/teams';
+import { createTeams, updateTeam } from '../../api/teams';
 
 const initialState = {
   team_name: '',
 };
 // this is a comment
-function TeamForm({ obj }) {
+function TeamForm ({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const router = useRouter();
   const { user } = useAuth();

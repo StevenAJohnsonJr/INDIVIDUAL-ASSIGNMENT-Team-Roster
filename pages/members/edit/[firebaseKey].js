@@ -1,30 +1,15 @@
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import MemberCard from '../../../components/MembersCard';
-import { viewMemberDetails } from '../../../API calls/mergeData';
+import { useEffect, useState } from 'react';
+import { getSingleMember } from '../../../api/members';
+import MemberForm from '../../../components/forms/MembersForm';
 
-// inside component use
-export default function ViewMembers() {
-  const [teamMembers, setTeamMembers] = useState([]);
+export default function EditTeam() {
+  const [editAuth, setEditAuth] = useState({});
   const router = useRouter();
   const { firebaseKey } = router.query;
 
   useEffect(() => {
-    viewMemberDetails(firebaseKey).then(setTeamMembers);
+    getSingleMember(firebaseKey).then(setEditAuth);
   }, [firebaseKey]);
-
-  return (
-    <div className="mt-5 d-flex flex-wrap">
-      <div className="text-blue ms-5 details">
-        <h5>
-          By {teamMembers.team_name}
-        </h5>
-      </div>
-      <div className="d-flex flex-wrap">
-        {teamMembers.members?.map((member) => (
-          <MemberCard key={member.firebaseKey} memberObj={member} onUpdate={viewMemberDetails} />
-        ))}
-      </div>
-    </div>
-  );
+  return (<MemberForm obj={editAuth} />);
 }

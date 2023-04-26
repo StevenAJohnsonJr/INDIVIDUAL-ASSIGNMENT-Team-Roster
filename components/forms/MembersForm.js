@@ -5,8 +5,8 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { createMember, updateMember } from '../../API calls/members';
-import { getTeams } from '../../API calls/teams';
+import { createMember, updateMember } from '../../api/members';
+import { getTeams } from '../../api/teams';
 
 const initialState = {
   image: '',
