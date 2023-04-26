@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
+import { deleteSingleTeam } from '../API calls/teams';
 // import { deleteSingleAuthor } from '../api/authorData';
 
 function TeamCard({ teamObj, onUpdate }) {
@@ -19,7 +20,7 @@ function TeamCard({ teamObj, onUpdate }) {
       {/* <Card.Img variant="top" src={authorObj.image} alt={authorObj.title} style={{ height: '400px' }} /> */}
       <Card.Body>
         <Card.Title>{teamObj.team_name}</Card.Title>
-         {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS  */}
+        {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS  */}
         <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">
             VIEW
