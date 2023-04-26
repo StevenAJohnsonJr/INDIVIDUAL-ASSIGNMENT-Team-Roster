@@ -11,7 +11,7 @@ const initialState = {
   team_name: '',
 };
 // this is a comment
-function TeamForm ({ obj }) {
+function TeamForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const router = useRouter();
   const { user } = useAuth();
